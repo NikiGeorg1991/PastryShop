@@ -1,0 +1,10 @@
+package com.codeacademy.pastryshop.repository;
+
+import com.codeacademy.pastryshop.model.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserRepository extends JpaRepository<User, Long>
+{
+  User findByUsername(String username);
+
+}
